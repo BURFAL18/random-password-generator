@@ -14,26 +14,34 @@ int size = sizeof(alphanum) - 1;
 int main()
 {
     //password length
-    int y;
-    cin>>y;
-    cout<<"ENTER THE LENGTH OF PASSWORD "<<y<<endl;
+    cout<<" list of common passwords not to be used";
+    
+    cout<< " \n 1.ABCDEFGH \n 2.12345678 \n 3.password \n 4.qwerty \n 5.your date of birth "<<endl;
+    cout<<" Thus simply use this app for creating secure passcodes  "<<endl;
+    
+     int y;
+     cout<<"enter the length of your password ";
+     cin>>y;
+    //CHECKING FOR THE PASSWORD LENGTH (STRONG/ WEAK)
+
     if(y<8)
     {
-        cout<<"PASSWORD  STRENGTH : WEAK\n ";
+        cout<<" \nPASSWORD  STRENGTH : WEAK ";
     }
-    else{
-        cout<<" PASSWORD STRENGTH :STRONG \n ";
+    else
+    {
+        cout<<" \n PASSWORD STRENGTH :STRONG  ";
     }
 
-    int length = y;
-    cout<<" Your randomly generated password is "<<endl;
+    int length = y; // FINALISING THE LENGTH OF THE PASSWORD
+    cout<<"\nSo your randomly generated password is  :";
 
-    srand(time(0)); // PASSWORD GENERATION
+     srand(time(0));  // PASSWORD GENERATION
+
     for (int i = 0; i < length; i++)
     {
         cout<< alphanum[rand() % size];
     }
 
-
-    return 0;
+cout<<endl;
 }
